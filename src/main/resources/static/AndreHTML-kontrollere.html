@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andre HTML-kontrollere (nedtrekkslister, radioknapper og avkrysningsbokser)</title>
+</head>
+<body>
+<table>
+    <tr><td>Velg type:</td></tr>
+    <tr><td>Baguette</td>
+        <td><input type="radio" name="frokost" value="Baguette"></td></tr>
+    <tr><td>Smørbrød</td>
+        <td><input type="radio" name="frokost" value="Smørbrød"/></td></tr>
+    <tr><td>Velg pålegg:</td></tr>
+    <tr><td>Reker</td>
+        <td><input type="checkbox" name="paalegg" value="Reker"/></td></tr>
+    <tr><td>Egg</td>
+        <td><input type="checkbox" name="paalegg" value="Egg"/></td></tr>
+    <tr><td>Majones</td>
+        <td><input type="checkbox" name="paalegg" value="Majones"/></td></tr>
+    <tr><td>Velg betalingsmåter:</td></tr>
+    <tr><td><select id="betaling">
+        <option>Kontant</option>
+        <option>Visa</option>
+        <option>Mastercard</option>
+    </select>
+    </td></tr>
+</table>
+<span id="resultat"></span><br/>
+<button onclick="velg()">Velg</button>
+<script type="application/javascript">
+    function velg(){
+        let ut="Frokost : ";
+        let frokostArray = document.getElementsByName("frokost");
+        for (let frokost of frokostArray){
+            if(frokost.checked){
+                ut+=frokost.value;
+            }
+        }
+        ut += "<br/>Med pålegg: ";
+        const paaleggArray = document.getElementsByName("paalegg");
+        for (let paalegg of paaleggArray){
+            if(paalegg.checked){
+                ut +=paalegg.value+" ";
+            }
+        }
+        ut+="<br/>Betalingsmåte : "+document.getElementById("betaling").value;
+        document.getElementById("resultat").innerHTML=ut;
+    }
+</script>
+</body>
+</html>

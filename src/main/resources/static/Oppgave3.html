@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 3</title>
+    <script>
+        function pluss(){
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+
+            if(isNaN(in_1) || isNaN(in_2)){
+                alert("Feil tallformat, prøv igjen. ");
+            } else {
+                output.innerHTML = (in_1 + in_2).toString(); //hvorfor toString ??
+            }
+        }
+
+        function minus(){
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+
+            if(isNaN(in_1) || isNaN(in_2)){
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 - in_2).toString();
+            }
+        }
+
+        function gange(){
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+
+            if(isNaN(in_1) || isNaN(in_2)){
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 * in_2).toString();
+            }
+        }
+
+        function dele(){
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+
+            if(isNaN(in_1) || isNaN(in_2)){
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 / in_2).toString();
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="in_1" type="number" value=""/>
+    <input id="in_2" type="number" value=""/>
+
+    <button onclick="pluss();"> + </button>
+    <button onclick="minus();"> - </button>
+    <button onclick="gange();"> * </button>
+    <button onclick="dele();"> / </button>
+
+    <div id="kalk-output"> </div>
+</body>
+</html>
