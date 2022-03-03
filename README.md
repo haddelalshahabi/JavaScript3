@@ -1,5 +1,5 @@
-Ukeoppgaver JavaScript 3
-Oppgave 1
+# Ukeoppgaver JavaScript 3
+## Oppgave 1
 Lag en enkel HTML-side der du kan skrive inn navnet og alderen din i to forskjellige
 tekstbokser. Skriv så JavaScript-kode i samme fil for å vise navnet og alderen når en knapp
 trykkes. Lag så en sjekk på aldersfeltet om feltet inneholder et tall som er større enn null.
@@ -7,7 +7,7 @@ Dersom det ikke er det skal det skrives ut en feilmelding enten via en «alert»
 eget felt.
 
 
-Oppgave 2
+## Oppgave 2
 Lag en HTML-side som konverterer fra farenheit til celsius. Formelen er:
 
 C = (5/9)*(F-32)
@@ -19,28 +19,27 @@ Dersom det skrives inn noe i inputfeltet for C så skal tilsvarende verdi i F le
 Dersom det skrives inn noe i inputfeltet for F så skal tilsvarende verdi i C legges ut i dette feltet.
 JavaScript skal brukes ved beregning og utlegging av resultater.
 
-Oppgave 3
+## Oppgave 3
 Lag en HTML-kalkulator med to inputfelt og fire knapper, en for hver av regneartene +, - ,* og /.
 Lag så JavaScript-kode som avhengig av hvilken knapp som er trykket viser resultatet av
 regnestykket. Det skal også valideres at inputfeltene bare kan inneholde tall (også dette i form
 av JavaScript-kode). Feilmeldinger skal også vises dersom det blir skrevet inn noe annet enn tall i
 inputboksene.
 
-Oppgave 4
+## Oppgave 4
 Utvid ukeoppgaven fra i forrige uke (personregister) med å ha mulighet for å lese inn persondataene via tekstbokser også legge disse objektene inn i arrayet. Dette skjer ved en ny knapp. Samme funksjonalitet for å vise arrayet (via egen knapp).
 
-Ekstraoppgaver
-Disse ekstraoppgavene kan være litt mer krevende.
+# Ekstraoppgaver
 
-Ekstraoppgave 1
+## Ekstraoppgave 1
 Lag en gjøremålsliste (todo-liste). Det skal være et tekstfelt hvor brukeren kan legge til gjøremål. Ved onchange skal verdien av skriv inn feltet legges til som et gjøremål i en HTML-liste. Ved siden av hvert gjøremål skal det være en sjekkboks som brukeren kan krysse av hvis oppgaven er ferdig.
 Tips: Bruk metoden dinTabell.insertAdjacentHTML('beforeend', "todo html her") i stedet for innerHTML siden det vil resette alle sjekkboksene hver gang det legges til et element.
 
-Ekstraoppgave 2
+## Ekstraoppgave 2
 Utvid forige oppgave med å lage enda en liste. Den første listen skal nå kun inneholde uferdige gjøremål og den andre kun ferdige. Du skal også markere alle ferdige gjøremål med en strek gjennom de. Bruk textDecoration = "line-through".
 Tips: Gi en unik id til alle gjøremålene og kall en funksjon med denne id'en som parameter hvis sjekkboksen sjekkes/usjekkes. Du kan flytte et element fra en liste til en annen med metoden denAndreListen.appendChild(dittGjøremål)
 
-Ekstraoppgave 3
+## Ekstraoppgave 3
 <button onclick="skrivUtOppgaver()">Ta test!</button>
 <ul id="liste"></ul>
 <script>
